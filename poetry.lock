@@ -1,7 +1,7 @@
 [[package]]
 category = "dev"
 description = "Async http client/server framework (asyncio)"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "aiohttp"
 optional = false
 python-versions = ">=3.5.3"
@@ -46,7 +46,7 @@ version = "0.1.0"
 [[package]]
 category = "dev"
 description = "Timeout context manager for asyncio programs"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "async-timeout"
 optional = false
 python-versions = ">=3.5.3"
@@ -145,7 +145,7 @@ version = "4.1.0"
 [[package]]
 category = "dev"
 description = "Lightweight, extensible schema and data validation tool for Python dictionaries."
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "cerberus"
 optional = false
 python-versions = ">=2.7"
@@ -233,7 +233,7 @@ version = "4.4.2"
 [[package]]
 category = "dev"
 description = "Dependency resolution for Python"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "dephell"
 optional = false
 python-versions = ">=3.6"
@@ -275,7 +275,7 @@ tests = ["aioresponses", "pytest", "requests-mock"]
 [[package]]
 category = "dev"
 description = "pathlib for archives"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "dephell-archive"
 optional = false
 python-versions = ">=3.5"
@@ -287,7 +287,7 @@ attrs = "*"
 [[package]]
 category = "dev"
 description = "Argparse on steroids: groups, commands, colors."
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "dephell-argparse"
 optional = false
 python-versions = ">=3.5"
@@ -296,7 +296,7 @@ version = "0.1.2"
 [[package]]
 category = "dev"
 description = "Find changelog for github repository, local dir, parse changelog"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "dephell-changelogs"
 optional = false
 python-versions = ">=3.5"
@@ -311,7 +311,7 @@ dev = ["pytest", "pytest-xdist"]
 [[package]]
 category = "dev"
 description = "Find project modules and data files (packages and package_data for setup.py)."
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "dephell-discover"
 optional = false
 python-versions = ">=3.5"
@@ -323,7 +323,7 @@ attrs = "*"
 [[package]]
 category = "dev"
 description = "Get info about OSS licenses"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "dephell-licenses"
 optional = false
 python-versions = ">=3.5"
@@ -336,7 +336,7 @@ requests = "*"
 [[package]]
 category = "dev"
 description = "Parse dependency links"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "dephell-links"
 optional = false
 python-versions = ">=3.5"
@@ -348,7 +348,7 @@ attrs = "*"
 [[package]]
 category = "dev"
 description = "Work with environment markers (PEP-496)"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "dephell-markers"
 optional = false
 python-versions = ">=3.5"
@@ -362,7 +362,7 @@ packaging = "*"
 [[package]]
 category = "dev"
 description = "Work with python versions"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "dephell-pythons"
 optional = false
 python-versions = ">=3.5"
@@ -376,7 +376,7 @@ packaging = "*"
 [[package]]
 category = "dev"
 description = "Read metainfo from setup.py"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "dephell-setuptools"
 optional = false
 python-versions = ">=3.5"
@@ -391,7 +391,7 @@ dev = ["mypy", "pkginfo", "pytest"]
 [[package]]
 category = "dev"
 description = "activate virtual environment for current shell"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "dephell-shells"
 optional = false
 python-versions = ">=3.5"
@@ -405,7 +405,7 @@ shellingham = "*"
 [[package]]
 category = "dev"
 description = "Work with version specifiers."
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "dephell-specifier"
 optional = false
 python-versions = ">=3.6"
@@ -417,7 +417,7 @@ packaging = ">=17.1"
 [[package]]
 category = "dev"
 description = "Manage virtual environments"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "dephell-venvs"
 optional = false
 python-versions = ">=3.5"
@@ -431,7 +431,7 @@ requests = "*"
 [[package]]
 category = "dev"
 description = "Library for bumping project version like a pro"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "dephell-versioning"
 optional = false
 python-versions = ">=3.5"
@@ -443,7 +443,7 @@ packaging = "*"
 [[package]]
 category = "dev"
 description = "Docutils -- Python Documentation Utilities"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "docutils"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
@@ -625,7 +625,7 @@ version = "2.9"
 [[package]]
 category = "dev"
 description = "Patch ssl.match_hostname for Unicode(idna) domains support"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"3.7\""
 name = "idna-ssl"
 optional = false
 python-versions = "*"
@@ -826,7 +826,7 @@ i18n = ["Babel (>=0.8)"]
 [[package]]
 category = "dev"
 description = "Markdown and reStructuredText in a single file."
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "m2r"
 optional = false
 python-versions = "*"
@@ -855,7 +855,7 @@ version = "0.6.1"
 [[package]]
 category = "dev"
 description = "The fastest markdown parser in pure Python"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "mistune"
 optional = false
 python-versions = "*"
@@ -864,7 +864,7 @@ version = "0.8.4"
 [[package]]
 category = "dev"
 description = "Rolling backport of unittest.mock for all Pythons"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "mock"
 optional = false
 python-versions = ">=3.6"
@@ -898,7 +898,7 @@ version = "8.2.0"
 [[package]]
 category = "dev"
 description = "multidict implementation"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "multidict"
 optional = false
 python-versions = ">=3.5"
@@ -956,7 +956,7 @@ version = "0.8.0"
 [[package]]
 category = "dev"
 description = "Pexpect allows easy control of interactive console applications."
-marker = "python_version >= \"3.4\" and sys_platform != \"win32\" or python_version == \"3.6\" or python_version == \"2.7\" and sys_platform != \"win32\""
+marker = "python_version >= \"3.4\" and sys_platform != \"win32\" or python_version >= \"3.6\" and python_version < \"4.0\" or python_version == \"2.7\" and sys_platform != \"win32\""
 name = "pexpect"
 optional = false
 python-versions = "*"
@@ -1036,7 +1036,7 @@ six = ">=1.9"
 [[package]]
 category = "dev"
 description = "Run a subprocess in a pseudo terminal"
-marker = "python_version == \"3.6\" and sys_platform != \"win32\" or python_version == \"3.6\" or python_version == \"2.7\" and sys_platform != \"win32\""
+marker = "python_version >= \"3.6\" and sys_platform != \"win32\" and python_version < \"4.0\" or python_version >= \"3.6\" and python_version < \"4.0\" or python_version == \"2.7\" and sys_platform != \"win32\""
 name = "ptyprocess"
 optional = false
 python-versions = "*"
@@ -1245,7 +1245,7 @@ pyasn1 = ">=0.1.3"
 [[package]]
 category = "dev"
 description = "ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "ruamel.yaml"
 optional = false
 python-versions = "*"
@@ -1263,7 +1263,7 @@ jinja2 = ["ruamel.yaml.jinja2 (>=0.2)"]
 [[package]]
 category = "dev"
 description = "C version of reader, parser and emitter for ruamel.yaml derived from libyaml"
-marker = "platform_python_implementation == \"CPython\" and python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"3.9\" and platform_python_implementation == \"CPython\""
 name = "ruamel.yaml.clib"
 optional = false
 python-versions = "*"
@@ -1281,7 +1281,7 @@ version = "1.10.0"
 [[package]]
 category = "dev"
 description = "Tool to Detect Surrounding Shell"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "shellingham"
 optional = false
 python-versions = "!=3.0,!=3.1,!=3.2,!=3.3,>=2.6"
@@ -1316,7 +1316,7 @@ version = "0.10.0"
 [[package]]
 category = "dev"
 description = "Style preserving TOML library"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "tomlkit"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
@@ -1364,7 +1364,7 @@ version = "3.7.4.1"
 [[package]]
 category = "dev"
 description = "Backported and Experimental Type Hints for Python 3.5+"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"3.7\""
 name = "typing-extensions"
 optional = false
 python-versions = "*"
@@ -1414,7 +1414,7 @@ version = "0.5"
 [[package]]
 category = "dev"
 description = "Yet another URL library"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "yarl"
 optional = false
 python-versions = ">=3.5"
@@ -1427,7 +1427,7 @@ multidict = ">=4.0"
 [[package]]
 category = "dev"
 description = "Yet Another Terminal Spinner"
-marker = "python_version == \"3.6\""
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
 name = "yaspin"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
@@ -1452,7 +1452,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pathlib2", "unittest2", "jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "f0fbbedcc890231eb9eb23368aa219bcc89f1bff6fa41059f8be7fe986c6e542"
+content-hash = "768a1314d7fed4730a4dabd3df152492f7001fbe21f21c92fcccc6b498369d3b"
 python-versions = "~2.7 || ^3.5 || ^3.6"
 
 [metadata.files]
