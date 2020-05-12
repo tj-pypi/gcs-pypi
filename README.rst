@@ -19,20 +19,14 @@ Install gcspypi using pip:
 Usage
 -----
 
-Cache Header
-^^^^^^^^^^^^
+Create GCS Bucket
+^^^^^^^^^^^^^^^^^
 
-Set cache-control header for index.html
 
-.. code-block:: bash
+* Create a new bucket
 
-   $ gsutil setmeta -h "cache-control:public, must-revalidate, proxy-revalidate, max-age=0" gs://[BUCKET]/index.html
-
-Distributing packages
-^^^^^^^^^^^^^^^^^^^^^
-
-IAM (Role & Service Account)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Setup IAM (Role & Service Account)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Setup service account with the following permissions
 
@@ -87,6 +81,9 @@ Example
 
 Visit `Cloud IAM Conditions <https://cloud.google.com/iam/docs/conditions-overview?_gac=1.79817061.1587676512.CjwKCAjw-YT1BRAFEiwAd2WRtsely2bRUq6KF3rxDzHVoCLbdZoy-AqW0raFx96lJeQ6O2Ie8q6IMhoCrskQAvD_BwE&_ga=2.40552928.-350153010.1574411744>`_  for more information
 
+Distributing packages
+^^^^^^^^^^^^^^^^^^^^^
+
 You can now use ``gcspypi`` to create Python packages and upload them to your GCS bucket. 
 To hide packages from the public, you can use the ``--private`` option to prevent the packages from 
 being accessible directly via the GCS bucket (they will only be accessible via your Domain or 
@@ -96,6 +93,15 @@ alternatively you can specify a secret subdirectory using the ``--secret`` optio
 
    cd /path/to/your-project/
    gcspypi --bucket mybucket [--private] [--secret SECRET]
+
+Cache Header
+^^^^^^^^^^^^
+
+Set cache-control header for index.html
+
+.. code-block:: bash
+
+   $ gsutil setmeta -h "cache-control:public, must-revalidate, proxy-revalidate, max-age=0" gs://[BUCKET]/index.html
 
 Installing packages
 ^^^^^^^^^^^^^^^^^^^
