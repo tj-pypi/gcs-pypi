@@ -109,3 +109,9 @@ Alternatively, you can configure the index URL in ``~/.pip/pip.conf``\ :
 
    [global]
    extra-index-url = https://pypi.example.com/SECRET/
+
+Credits
+~~~~~~~
+
+
+* `s3pypi <https://github.com/novemberfiveco/s3pypi>`_
