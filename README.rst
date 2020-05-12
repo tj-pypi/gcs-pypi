@@ -51,7 +51,7 @@ Example
 
 
 * 
-  Create Role "PYPI Role"
+  Create Role "PYPI"
 
 * 
   Assign Permissions

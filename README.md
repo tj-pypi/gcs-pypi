@@ -47,7 +47,7 @@ Recommended that you create a custom Role which can be inherited by the service 
 
 Example
 
-- Create Role "PYPI Role"
+- Create Role "PYPI"
 
 - Assign Permissions
 
