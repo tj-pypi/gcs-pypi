@@ -16,14 +16,17 @@ Install gcspypi using pip:
 
    pip install gcspypi
 
+Usage
+-----
+
+Cache Header
+^^^^^^^^^^^^
+
 Set cache-control header for index.html
 
 .. code-block:: bash
 
    $ gsutil setmeta -h "cache-control:public, must-revalidate, proxy-revalidate, max-age=0" gs://[BUCKET]/index.html
-
-Usage
------
 
 Distributing packages
 ^^^^^^^^^^^^^^^^^^^^^
