@@ -2,7 +2,11 @@ import os
 import shutil
 import tempfile
 from contextlib import contextmanager
-from mock import mock
+
+try:
+    import mock
+except ImportError:
+    from unittest import mock
 
 import pytest
 from google.cloud import storage
