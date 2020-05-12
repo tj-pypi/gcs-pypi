@@ -17,5 +17,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
         WITH_V: true
         DEFAULT_BUMP: patch
-        DRY_RUN: true
         INITIAL_VERSION: 0.1.0
