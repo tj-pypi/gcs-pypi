@@ -46,3 +46,4 @@ update-requirements:
 
 deploy:
 	git commit --allow-empty -m "[deploy]"
+	git push
