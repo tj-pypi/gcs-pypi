@@ -42,3 +42,7 @@ update-setup:
 
 update-requirements:
 	dephell deps convert --from=pyproject.toml --to=requirements.txt
+
+
+deploy:
+	git commit --allow-empty -m "[deploy]"
