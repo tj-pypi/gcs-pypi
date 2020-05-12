@@ -12,7 +12,7 @@ gcspypi = "gcspypi.__main__:main"
 
 [tool.poetry.dependencies]
 Jinja2 = "^2.10.1"
-python = "~2.7 || ^3.5"
+python = "~2.7 || ^3.5 || ^3.6"
 wheel = "^0.33.6"
 google-cloud-storage = "^1.28"
 google-cloud-core = "^1.3"
@@ -26,6 +26,7 @@ isort = "^4.3.21"
 pytest = ">=4.6.5"
 pytest-cov = "^2.7.1"
 ipdb = "^0.13.2"
+dephell = {version = "^0.8.3", python = "3.6"}
 
 [tool.black]
 exclude = '''

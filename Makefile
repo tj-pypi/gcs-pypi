@@ -39,3 +39,6 @@ format:
 
 update-setup:
 	dephell deps convert --from=pyproject.toml --to=setup.py
+
+update-requirements:
+	dephell deps convert --from=pyproject.toml --to=requirements.txt

@@ -16,7 +16,7 @@ Install gcspypi using pip:
 
    pip install gcspypi
 
-SET cache-control header for index.html
+Set cache-control header for index.html
 
 .. code-block:: bash
 
@@ -28,10 +28,66 @@ Usage
 Distributing packages
 ^^^^^^^^^^^^^^^^^^^^^
 
+IAM (Role & Service Account)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Setup service account with the following permissions
+
+.. code-block:: text
+
+   storage.buckets.get
+   storage.buckets.getIamPolicy
+   storage.buckets.update
+   storage.objects.create
+   storage.objects.delete
+   storage.objects.get
+   storage.objects.getIamPolicy
+   storage.objects.list
+   storage.objects.setIamPolicy
+
+Recommended that you create a custom Role which can be inherited by the service account
+
+Example
+
+
+* 
+  Create Role "PYPI Role"
+
+* 
+  Assign Permissions
+
+.. code-block:: text
+
+   storage.buckets.get
+   storage.buckets.getIamPolicy
+   storage.buckets.update
+   storage.objects.create
+   storage.objects.delete
+   storage.objects.get
+   storage.objects.getIamPolicy
+   storage.objects.list
+   storage.objects.setIamPolicy
+
+
+* 
+  Create a Service Account e.g pypi
+
+* 
+  Select the "PYPI" Role created above
+
+* 
+  Add a condition to limit access to only that GCS bucket
+
+.. code-block:: yaml
+
+   resource.name == "mybucket"
+
+Visit `Cloud IAM Conditions <https://cloud.google.com/iam/docs/conditions-overview?_gac=1.79817061.1587676512.CjwKCAjw-YT1BRAFEiwAd2WRtsely2bRUq6KF3rxDzHVoCLbdZoy-AqW0raFx96lJeQ6O2Ie8q6IMhoCrskQAvD_BwE&_ga=2.40552928.-350153010.1574411744>`_  for more information
+
 You can now use ``gcspypi`` to create Python packages and upload them to your GCS bucket. 
 To hide packages from the public, you can use the ``--private`` option to prevent the packages from 
-being accessible directly via the GCS bucket (they will only be accessible via Cloudfront and you can 
-use WAF rules to protect them), or alternatively you can specify a secret subdirectory using the ``--secret`` option:
+being accessible directly via the GCS bucket (they will only be accessible via your Domain or 
+alternatively you can specify a secret subdirectory using the ``--secret`` option:
 
 .. code-block:: bash
 
@@ -41,7 +97,7 @@ use WAF rules to protect them), or alternatively you can specify a secret subdir
 Installing packages
 ^^^^^^^^^^^^^^^^^^^
 
-Install your packages using ``pip`` by pointing the ``--extra-index-url`` to your CloudFront distribution (optionally followed by a secret subdirectory):
+Install your packages using ``pip`` by pointing the ``--extra-index-url`` to your Custom domain (optionally followed by a secret subdirectory):
 
 .. code-block:: bash
 
