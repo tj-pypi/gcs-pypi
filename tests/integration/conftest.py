@@ -3,11 +3,9 @@ import shutil
 import tempfile
 from contextlib import contextmanager
 from unittest import mock
-from unittest.mock import MagicMock, Mock, PropertyMock, patch
 
-from google.cloud import storage
 import pytest
-from google.cloud.storage._helpers import _PropertyMixin
+from google.cloud import storage
 
 
 @pytest.fixture(scope="session")
@@ -52,16 +50,15 @@ def gcs_credentials():
 def gcs_bucket(gcs_credentials):
     storage_client = mock.create_autospec(storage.Client)
     mock_bucket = mock.create_autospec(
-        spec=storage.Bucket(storage_client, 'gcspypi-test'),
-        spec_set=True,
+        spec=storage.Bucket(storage_client, "gcspypi-test"), spec_set=True,
     )
     mock_blob = mock.create_autospec(storage.Blob)
 
     storage_client.get_bucket.return_value = mock_bucket
 
-    def handle_get_data(path):
-        print(path)
+    # def handle_get_data(path):
+    #     print(path)
 
-    mock_bucket.get_blob.side_effect = handle_get_data
+    mock_bucket.get_blob.side_effect = mock_blob
 
     yield mock_bucket

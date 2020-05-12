@@ -36,3 +36,6 @@ lint:
 format:
 	poetry run isort --apply
 	poetry run black .
+
+update-setup:
+	dephell deps convert --from=pyproject.toml --to=setup.py

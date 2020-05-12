@@ -12,9 +12,7 @@ log = logging.getLogger()
 class GCSStorage(object):
     """Abstraction for storing package archives and index files in a GCS bucket."""
 
-    def __init__(
-        self, bucket, secret=None, bare=False, private=False, profile=None
-    ):
+    def __init__(self, bucket, secret=None, bare=False, private=False, profile=None):
         self.client = storage.Client()
         self.bucket = bucket
         self.secret = secret
@@ -23,10 +21,14 @@ class GCSStorage(object):
 
     def _object(self, package, filename):
         path = "%s/%s" % (package.directory, filename)
-        return (
-            self.client.get_bucket(self.bucket)
-            .get_blob("%s/%s" % (self.secret, path) if self.secret else path)
-        )
+        try:
+            return self.client.get_bucket(self.bucket).get_blob(
+                "%s/%s" % (self.secret, path) if self.secret else path
+            )
+        except AttributeError:
+            return self.client.get_bucket(self.bucket).blob(
+                "%s/%s" % (self.secret, path) if self.secret else path
+            )
 
     def get_index(self, package):
         try:
@@ -39,10 +41,7 @@ class GCSStorage(object):
 
     def put_index(self, package, index):
         self._object(package, self.index).upload_from_string(
-            data=index.to_html(),
-            content_type="text/html",
-            CacheControl="public, must-revalidate, proxy-revalidate, max-age=0",
-            predefined_acl=self.acl,
+            data=index.to_html(), content_type="text/html", predefined_acl=self.acl,
         )
 
     def put_package(self, package, dist_path=None):
@@ -51,5 +50,7 @@ class GCSStorage(object):
             log.debug("Uploading file `{}`...".format(path))
             with open(path, mode="rb") as f:
                 self._object(package, filename).upload_from_file(
-                    file_obj=f, content_type="application/x-gzip", predefined_acl=self.acl
+                    file_obj=f,
+                    content_type="application/x-gzip",
+                    predefined_acl=self.acl,
                 )
