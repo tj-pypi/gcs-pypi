@@ -1272,7 +1272,7 @@ version = "0.2.0"
 [[package]]
 category = "dev"
 description = "scandir, a better directory iterator and faster os.walk()"
-marker = "python_version == \"2.7\" or python_version == \"2.7\" and (python_version == \"2.7\")"
+marker = "python_version < \"3.5\" or python_version == \"2.7\""
 name = "scandir"
 optional = false
 python-versions = "*"
