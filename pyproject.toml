@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "gcspypi"
+version = "0.10.1"
+description = "CLI for creating a Python Package Repository in a GCS bucket"
+authors = [
+    "Tonye Jack <jtonye@ymail.com>",
+]
+
+[tool.poetry.scripts]
+gcspypi = "gcspypi.__main__:main"
+
+[tool.poetry.dependencies]
+Jinja2 = "^2.10.1"
+python = "~2.7 || ^3.5"
+wheel = "^0.33.6"
+google-cloud-storage = "^1.28"
+google-cloud-core = "^1.3"
+google-api-core = "^1.17"
+futures = {version = "^3.3", python = "~2.7"}
+
+[tool.poetry.dev-dependencies]
+black = {version = "^19.3b0", allow-prereleases = true, python = "^3.6"}
+flake8 = "^3.7.8"
+isort = "^4.3.21"
+pytest = ">=4.6.5"
+pytest-cov = "^2.7.1"
+ipdb = "^0.13.2"
+
+[tool.black]
+exclude = '''
+      \.eggs
+    | \.git
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | build
+    | dist
+'''
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

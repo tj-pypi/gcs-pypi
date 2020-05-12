@@ -1,0 +1,2 @@
+class gcspypiError(Exception):
+    pass
