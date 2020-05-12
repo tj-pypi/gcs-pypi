@@ -12,8 +12,13 @@ def test_secret_in_gcs_key(secret):
     mock_bucket = mock.create_autospec(storage.Bucket)
     mock_blob = mock.create_autospec(storage.Blob)
 
-    mock_bucket.get_blob.return_value = MagicMock(key=[secret])
-    storage_client.get_bucket.return_value = mock_bucket
+    mock_bucket.return_value = mock_blob
+    bucket_mock = MagicMock(spec=mock_bucket)
+    name = PropertyMock(return_value="gcspypi-test")
+    type(bucket_mock).name = name
+    bucket_mock.get_blob.return_value = MagicMock(key=[secret])
+    storage_client.get_bucket.return_value = bucket_mock
+    bucket_mock.reload = MagicMock()
 
     mock_bucket.get_blob.return_value = mock_blob
 
