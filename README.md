@@ -1,5 +1,7 @@
 # gcspypi
 
+![Python package](https://github.com/jackton1/gcspypi/workflows/Python%20package/badge.svg)
+
 gcspypi is a CLI for creating a Python Package Repository in an GCS bucket.
 
 
