@@ -2,7 +2,8 @@
 
 ## Getting started
 
-So you're interested in contributing to gcspypi? That's great! We're excited to hear your ideas and experiences.
+So you're interested in contributing to gcspypi2? That's great! We're excited to hear your ideas and 
+experiences.
 
 This file describes all the different ways in which you can contribute.
 
@@ -15,7 +16,7 @@ Before doing so, take a look at the existing [Issues](https://github.com/jackton
 
 If the bug you encountered has not been reported yet, create a new Issue for it and make sure to label it as a 'bug'. To allow us to help you as efficiently as possible, always try to include the following:
 
-- What version of gcspypi are you using?
+- What version of gcspypi2 are you using?
 - What operating system or environment did the bug occur at.
 - What did go wrong?
 - What did you expect to happen?
