@@ -1,8 +1,8 @@
 from unittest import mock
-from unittest.mock import MagicMock, PropertyMock, patch
+from mock import MagicMock, PropertyMock, patch
 
-from gcspypi.package import Package
-from gcspypi.storage import GCSStorage
+from gcspypi2.package import Package
+from gcspypi2.storage import GCSStorage
 
 
 def test_secret_in_gcs_key(secret):
@@ -14,7 +14,7 @@ def test_secret_in_gcs_key(secret):
 
     mock_bucket.return_value = mock_blob
     bucket_mock = MagicMock(spec=mock_bucket)
-    name = PropertyMock(return_value="gcspypi-test")
+    name = PropertyMock(return_value="gcspypi2-test")
     type(bucket_mock).name = name
     bucket_mock.get_blob.return_value = MagicMock(key=[secret])
     storage_client.get_bucket.return_value = bucket_mock

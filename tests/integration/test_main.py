@@ -1,9 +1,9 @@
 import sys
-from unittest.mock import patch
+from mock import patch
 
 import pytest
 
-from gcspypi.__main__ import main as gcspypi
+from gcspypi2.__main__ import main as gcspypi
 
 # TODO (Fix me)
 

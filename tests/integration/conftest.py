@@ -2,7 +2,7 @@ import os
 import shutil
 import tempfile
 from contextlib import contextmanager
-from unittest import mock
+from mock import mock
 
 import pytest
 from google.cloud import storage
@@ -50,7 +50,7 @@ def gcs_credentials():
 def gcs_bucket(gcs_credentials):
     storage_client = mock.create_autospec(storage.Client)
     mock_bucket = mock.create_autospec(
-        spec=storage.Bucket(storage_client, "gcspypi-test"), spec_set=True,
+        spec=storage.Bucket(storage_client, "gcspypi2-test"), spec_set=True,
     )
     mock_blob = mock.create_autospec(storage.Blob)
 
