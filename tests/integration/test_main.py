@@ -1,13 +1,14 @@
 import sys
 
+import pytest
+
+from gcspypi2.__main__ import main as gcspypi2
+
 try:
     from unittest.mock import patch
 except ImportError:
     from mock import patch
 
-import pytest
-
-from gcspypi2.__main__ import main as gcspypi2
 
 # TODO (Fix me)
 

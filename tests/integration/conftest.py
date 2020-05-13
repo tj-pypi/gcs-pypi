@@ -3,13 +3,13 @@ import shutil
 import tempfile
 from contextlib import contextmanager
 
+import pytest
+from google.cloud import storage
+
 try:
     from unittest import mock
 except ImportError:
     import mock
-
-import pytest
-from google.cloud import storage
 
 
 @pytest.fixture(scope="session")
