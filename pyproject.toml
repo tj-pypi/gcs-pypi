@@ -8,7 +8,7 @@ authors = [
 readme = "README.md"
 
 [tool.poetry.scripts]
-gcspypi = "gcspypi.__main__:main"
+gcspypi = "gcspypi2.__main__:main"
 
 [tool.poetry.dependencies]
 Jinja2 = "^2.10.1"

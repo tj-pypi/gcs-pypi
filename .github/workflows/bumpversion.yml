@@ -19,7 +19,7 @@ jobs:
         WITH_V: true
         DEFAULT_BUMP: patch
         INITIAL_VERSION: 0.1.0
-
+# TODO Update the project version and commit back changes.
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
