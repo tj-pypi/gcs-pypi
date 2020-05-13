@@ -18,11 +18,11 @@ pip install gcspypi2
 
 ## Usage
 
-### Create GCS Bucket
+### GCS Bucket
 
 - Create a new bucket
 
-#### Setup IAM (Role & Service Account)
+#### IAM (Role & Service Account)
 
 Setup service account with the following permissions
 
