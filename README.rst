@@ -1,6 +1,6 @@
 
-gcspypi
-=======
+gcspypi2
+========
 
 
 .. image:: https://github.com/jackton1/gcspypi/workflows/Python%20package/badge.svg
@@ -8,7 +8,7 @@ gcspypi
    :alt: Python package
 
 
-gcspypi is a CLI for creating a Python Package Repository in an GCS bucket.
+gcspypi2 is a CLI for creating a Python Package Repository in an GCS bucket.
 
 Getting started
 ---------------
@@ -16,23 +16,23 @@ Getting started
 Installation
 ^^^^^^^^^^^^
 
-Install gcspypi using pip:
+Install gcspypi2 using pip:
 
 .. code-block:: bash
 
-   pip install gcspypi
+   pip install gcspypi2
 
 Usage
 -----
 
-Create GCS Bucket
-^^^^^^^^^^^^^^^^^
+GCS Bucket
+^^^^^^^^^^
 
 
 * Create a new bucket
 
-Setup IAM (Role & Service Account)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+IAM (Role & Service Account)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Setup service account with the following permissions
 
