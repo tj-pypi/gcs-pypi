@@ -1,11 +1,11 @@
-from unittest import mock
+try:
+    from unittest import mock
+    from unittest.mock import MagicMock, PropertyMock, patch
+except ImportError:
+    import mock
+    from mock import MagicMock, PropertyMock, patch
 
 import pytest
-
-try:
-    from mock import MagicMock, PropertyMock, patch
-except ImportError:
-    from unittest.mock import MagicMock, PropertyMock, patch
 
 from gcspypi2.package import Package
 from gcspypi2.storage import GCSStorage

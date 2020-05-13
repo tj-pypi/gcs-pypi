@@ -4,9 +4,9 @@ import tempfile
 from contextlib import contextmanager
 
 try:
-    import mock
-except ImportError:
     from unittest import mock
+except ImportError:
+    import mock
 
 import pytest
 from google.cloud import storage
