@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gcspypi2"
-version = "0.1.8"
+version = "0.1.9"
 description = "CLI for creating a Python Package Repository in a GCS bucket"
 authors = [
     "Tonye Jack <jtonye@ymail.com>",
