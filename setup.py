@@ -24,7 +24,7 @@ if os.path.exists(readme_path):
 setup(
     long_description=readme,
     name='gcspypi2',
-    version='0.1.10',
+    version='0.1.11',
     description='CLI for creating a Python Package Repository in a GCS bucket',
     python_requires='!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,<4.0,>=2.7',
     author='Tonye Jack',
