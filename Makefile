@@ -1,3 +1,5 @@
+PART := patch
+
 .PHONY: clean clean-test clean-pyc clean-build Makefile
 
 clean: clean-build clean-pyc clean-tests
@@ -38,10 +40,11 @@ format:
 	poetry run black .
 
 update-setup:
-	dephell deps convert --from=pyproject.toml --to=setup.py
+	poetry run dephell deps convert --from=pyproject.toml --to=setup.py
 
-
-deploy:
-	$(MAKE) update-setup
-	git commit --allow-empty -m "[deploy]"
-	git push
+# ----------------------------------------------------------
+# ---------- Upgrade project version (bumpversion)  --------
+# ----------------------------------------------------------
+increase-version: clean-build
+	echo "Increasing project '$(PART)' version..."
+	poetry run bumpversion --verbose $(PART)

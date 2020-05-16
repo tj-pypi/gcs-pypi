@@ -6,26 +6,39 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: "contains(github.event.head_commit.message, '[deploy]')"
     steps:
     - uses: actions/checkout@master
-      with:
-        fetch-depth: '0'
-    - name: Bump version and push tag
-      id: bump-version
-      uses: anothrNick/github-tag-action@1.17.2
-      env:
-        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
-        WITH_V: true
-        DEFAULT_BUMP: patch
-        INITIAL_VERSION: 0.1.0
-# TODO Update the project version and commit back changes.
-    - name: Commit files
+    - name: Setup git user
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git commit -m "Add changes" -a
-    - name: Push changes
+    - uses: actions/setup-python@v1
+      with:
+        python-version: '3.6'
+    - uses: actions/cache@v1
+      id: pip-cache
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Increase project version
+      run: |
+        pip install --upgrade pip wheel
+        pip install poetry
+        poetry install
+        make increase-version
+
+    - name: Push changes to master
       uses: ad-m/github-push-action@master
       with:
+        branch: master
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        tags: true
+
+    - name: Push changes to develop
+      uses: ad-m/github-push-action@master
+      with:
+        branch: develop
         github_token: ${{ secrets.GITHUB_TOKEN }}

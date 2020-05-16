@@ -28,6 +28,7 @@ pytest-cov = "^2.7.1"
 ipdb = "^0.13.2"
 dephell = {version = "^0.8.3", python = "^3.6"}
 mock = "3.0.5"
+bumpversion = "0.5.3"
 
 [tool.black]
 exclude = '''

@@ -1,0 +1,27 @@
+name: Auto PR
+on:
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+    branches:
+      - master
+      - develop
+
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - name: pull-request-develop-staging
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: "develop"
+          destination_branch: "master"
+          pr_title: "Develop → Master."
+          pr_body: ":rocket: *Automated PR* Changes on Develop to be merged into Master :rocket:"
+          pr_reviewer: "jackton1"
+          pr_label: "pypi-deploy"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
