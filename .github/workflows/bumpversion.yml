@@ -44,8 +44,13 @@ jobs:
         branch: master
         github_token: ${{ secrets.GITHUB_TOKEN }}
         tags: true
-    - name: Push changes to develop
-      uses: ad-m/github-push-action@master
+    - name: pull-request
+      uses: repo-sync/pull-request@v2
       with:
-        branch: develop
+        source_branch: "master"
+        destination_branch: "develop"
+        pr_title: "Master → Develop."
+        pr_body: ":crown: *An automated PR*"
+        pr_reviewer: "jackton1"
+        pr_label: "auto-pr"
         github_token: ${{ secrets.GITHUB_TOKEN }}
