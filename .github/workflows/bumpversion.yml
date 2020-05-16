@@ -47,7 +47,7 @@ jobs:
     - run: |
         git checkout develop
         git pull --allow-unrelated-histories
-        git merge master --allow-unrelated-histories
+        git merge master --allow-unrelated-histories -f
     - name: Push changes to develop
       uses: ad-m/github-push-action@master
       with:
