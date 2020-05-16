@@ -23,6 +23,13 @@ jobs:
         key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
         restore-keys: |
           ${{ runner.os }}-pip-
+    - uses: actions/cache@v1
+      id: poetry-cache
+      with:
+        path: ~/.cache/pypoetry
+        key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-poetry-
 
     - name: Increase project version
       run: |
@@ -38,7 +45,7 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         tags: true
     - run: |
-        git pull origin develop:develop
+        git pull origin develop:develop --allow-unrelated-histories
     - name: Push changes to develop
       uses: ad-m/github-push-action@master
       with:
