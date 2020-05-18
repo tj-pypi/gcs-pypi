@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gcs_pypi"
-version = "0.1.14"
+version = "0.1.15"
 description = "CLI for creating a Python Package Repository in a GCS bucket"
 authors = [
     "Tonye Jack <jtonye@ymail.com>",
