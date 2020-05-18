@@ -32,7 +32,7 @@ jobs:
       id: tox-cache
       with:
         path: .tox
-        key: ${{ runner.os }}-tox-${{ hashFiles('tox.ini') }}
+        key: ${{ runner.os }}-tox-${{ hashFiles('tox.ini') }}-${{ hashFiles('pyproject.toml') }}
         restore-keys: |
           ${{ runner.os }}-tox-
     - name: Install dependencies
