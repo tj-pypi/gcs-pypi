@@ -8,8 +8,8 @@ from zipfile import ZipFile
 
 from jinja2 import Environment, PackageLoader
 
-from gcspypi2 import __prog__
-from gcspypi2.exceptions import gcspypiError
+from gcs_pypi import __prog__
+from gcs_pypi.exceptions import gcspypiError
 
 log = logging.getLogger()
 

@@ -4,10 +4,10 @@ import argparse
 import logging
 import sys
 
-from gcspypi2 import __prog__, __version__
-from gcspypi2.exceptions import gcspypiError
-from gcspypi2.package import Package
-from gcspypi2.storage import GCSStorage
+from gcs_pypi import __prog__, __version__
+from gcs_pypi.exceptions import gcspypiError
+from gcs_pypi.package import Package
+from gcs_pypi.storage import GCSStorage
 
 log = logging.getLogger()
 

@@ -32,9 +32,9 @@ jobs:
       id: tox-cache
       with:
         path: .tox
-        key: ${{ runner.os }}-tox-${{ hashFiles('tox.ini') }}
+        key: ${{ runner.os }}-dev-tox-${{ hashFiles('tox.ini') }}-${{ hashFiles('pyproject.toml') }}
         restore-keys: |
-          ${{ runner.os }}-tox-
+          ${{ runner.os }}-dev-tox-
     - name: Install dependencies
       run: |
         pip install --upgrade pip wheel
