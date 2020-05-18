@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+      with:
+        token: ${{ secrets.PAT_TOKEN }}
     - run: git fetch origin +refs/heads/develop:refs/remotes/origin/develop
     - name: Setup git user
       run: |
