@@ -4,7 +4,6 @@
 
 gcs_pypi is a CLI for creating a Python Package Repository in an GCS bucket.
 
-
 ## Getting started
 
 ### Installation
