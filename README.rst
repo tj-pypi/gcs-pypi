@@ -53,10 +53,10 @@ Recommended that you create a custom Role which can be inherited by the service 
 Example
 
 
-*
+* 
   Create Role "PYPI"
 
-*
+* 
   Assign Permissions
 
 .. code-block:: text
@@ -72,13 +72,13 @@ Example
    storage.objects.setIamPolicy
 
 
-*
+* 
   Create a Service Account e.g pypi
 
-*
+* 
   Select the "PYPI" Role created above
 
-*
+* 
   Add a condition to limit access to only that GCS bucket
 
 .. code-block:: yaml
@@ -90,9 +90,9 @@ Visit `Cloud IAM Conditions <https://cloud.google.com/iam/docs/conditions-overvi
 Distributing packages
 ^^^^^^^^^^^^^^^^^^^^^
 
-You can now use ``gcspypi`` to create Python packages and upload them to your GCS bucket.
-To hide packages from the public, you can use the ``--private`` option to prevent the packages from
-being accessible directly via the GCS bucket (they will only be accessible via your Domain or
+You can now use ``gcspypi`` to create Python packages and upload them to your GCS bucket. 
+To hide packages from the public, you can use the ``--private`` option to prevent the packages from 
+being accessible directly via the GCS bucket (they will only be accessible via your Domain or 
 alternatively you can specify a secret subdirectory using the ``--secret`` option:
 
 .. code-block:: bash
