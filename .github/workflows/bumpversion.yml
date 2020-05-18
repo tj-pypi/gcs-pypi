@@ -42,7 +42,7 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         branch: master
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.PAT_TOKEN }}
         tags: true
     - name: pull-request
       uses: repo-sync/pull-request@v2
