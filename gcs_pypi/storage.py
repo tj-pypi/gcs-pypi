@@ -4,7 +4,7 @@ import os
 from google.cloud import storage
 from google.resumable_media import InvalidResponse
 
-from gcspypi2.package import Index
+from gcs_pypi.package import Index
 
 log = logging.getLogger()
 

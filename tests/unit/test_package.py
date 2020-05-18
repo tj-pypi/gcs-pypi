@@ -1,7 +1,7 @@
 import pytest
 
-from gcspypi2.exceptions import gcspypiError
-from gcspypi2.package import Index, Package
+from gcs_pypi.exceptions import gcspypiError
+from gcs_pypi.package import Index, Package
 
 
 def test_find_wheel_name(bdist_wheel_output):

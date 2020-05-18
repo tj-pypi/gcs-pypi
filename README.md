@@ -1,18 +1,18 @@
-# gcspypi2
+# gcs-pypi
 
 ![Python package](https://github.com/jackton1/gcspypi/workflows/Python%20package/badge.svg)
 
-gcspypi2 is a CLI for creating a Python Package Repository in an GCS bucket.
+gcs-pypi is a CLI for creating a Python Package Repository in an GCS bucket.
 
 
 ## Getting started
 
 ### Installation
 
-Install gcspypi2 using pip:
+Install gcs-pypi using pip:
 
 ```bash
-pip install gcspypi2
+pip install gcs-pypi
 ```
 
 

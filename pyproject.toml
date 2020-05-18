@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "gcspypi2"
+name = "gcs_pypi"
 version = "0.1.11"
 description = "CLI for creating a Python Package Repository in a GCS bucket"
 authors = [
@@ -8,7 +8,7 @@ authors = [
 readme = "README.md"
 
 [tool.poetry.scripts]
-gcspypi = "gcspypi2.__main__:main"
+gcspypi = "gcs_pypi.__main__:main"
 
 [tool.poetry.dependencies]
 Jinja2 = "^2.10.1"

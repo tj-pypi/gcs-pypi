@@ -7,8 +7,8 @@ except ImportError:
 
 import pytest
 
-from gcspypi2.package import Package
-from gcspypi2.storage import GCSStorage
+from gcs_pypi.package import Package
+from gcs_pypi.storage import GCSStorage
 
 
 @pytest.mark.skip("Fix with mock data")
@@ -21,7 +21,7 @@ def test_secret_in_gcs_key(secret):
 
     mock_bucket.return_value = mock_blob
     bucket_mock = MagicMock(spec=mock_bucket)
-    name = PropertyMock(return_value="gcspypi2-test")
+    name = PropertyMock(return_value="gcs_pypi-test")
     type(bucket_mock).name = name
     bucket_mock.get_blob.return_value = MagicMock(key=[secret])
     storage_client.get_bucket.return_value = bucket_mock

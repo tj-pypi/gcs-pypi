@@ -1,6 +1,6 @@
 import pytest
 
-from gcspypi2.__main__ import parse_args
+from gcs_pypi.__main__ import parse_args
 
 
 def test_cli_argparser_raises_no_exceptions():

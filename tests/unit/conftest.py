@@ -4,7 +4,7 @@ import string
 
 import pytest
 
-from gcspypi2.package import Package
+from gcs_pypi.package import Package
 
 
 @pytest.fixture(scope="function")
@@ -21,7 +21,7 @@ def private():
 
 @pytest.fixture(
     scope="function",
-    params=["helloworld-0.1", "gcspypi2-0.1.3", "distribution_costs-0.1.0"],
+    params=["helloworld-0.1", "gcs_pypi-0.1.3", "distribution_costs-0.1.0"],
 )
 def sdist_output(request):
     with open(os.path.join("tests", "data", "sdist_output", request.param)) as f:
@@ -44,11 +44,11 @@ def wheel_metadata(request):
     scope="function",
     params=[
         (
-            "gcspypi2",
+            "gcs_pypi",
             {
                 Package(
-                    "gcspypi2-" + v,
-                    {"gcspypi2-%s.tar.gz" % v, "gcspypi2-%s-py2-none-any.whl" % v},
+                    "gcs_pypi-" + v,
+                    {"gcs_pypi-%s.tar.gz" % v, "gcs_pypi-%s-py2-none-any.whl" % v},
                 )
                 for v in (
                     "0",
