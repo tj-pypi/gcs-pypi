@@ -5,6 +5,13 @@ on:
     branches:
       - master
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump GitHub context
+        run: echo $PR
+        env:
+          PR: ${{ toJson(github.event.pull_request) }}
   build:
     if: github.event.pull_request.merged == 'true'
     runs-on: ubuntu-latest
